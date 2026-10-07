@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IT Student Portfolio</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#111827;color:#e5e7eb;line-height:1.6}
+header{background:#0b1120;padding:22px 8%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;border-bottom:1px solid #243044}
+header h1{font-size:1.5rem;color:#60a5fa}
+nav a{color:#e5e7eb;text-decoration:none;margin-left:22px}
+nav a:hover{color:#60a5fa}
+.hero{min-height:70vh;display:flex;flex-direction:column;justify-content:center;padding:70px 10%;max-width:1100px;margin:auto}
+.hero .hello{color:#60a5fa;font-weight:bold}
+.hero h2{font-size:3rem;margin:8px 0 15px;color:white}
+.hero .intro{max-width:700px;color:#b8c1cf;font-size:1.1rem}
+.button{display:inline-block;width:fit-content;margin-top:25px;padding:11px 18px;background:#2563eb;color:white;text-decoration:none;border-radius:6px}
+section{max-width:1000px;margin:auto;padding:70px 8%}
+section h2{color:white;margin-bottom:22px;font-size:2rem;border-bottom:2px solid #2563eb;padding-bottom:8px}
+.about p,.contact p,.project-card p{color:#cbd5e1}
+.skills-grid,.projects-grid{display:grid;gap:15px}
+.skills-grid{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.projects-grid{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.skill,.project-card{background:#1f2937;padding:16px;border-radius:8px;border:1px solid #374151}
+.skill{text-align:center}
+.project-card{padding:22px;transition:transform .25s ease,box-shadow .25s ease}
+.project-card:hover{transform:translateY(-7px);box-shadow:0 12px 25px rgba(0,0,0,.35)}
+.project-card h3{color:#60a5fa;margin-bottom:10px}
+.project-card .tools{margin-top:14px;font-size:.9rem;color:#93c5fd}
+.contact p{margin-bottom:8px}
+footer{text-align:center;padding:30px;background:#0b1120;color:#94a3b8;margin-top:30px}
+@media(max-width:700px){header{flex-direction:column;gap:12px}nav a{margin:0 8px}.hero{min-height:60vh;padding:55px 8%}.hero h2{font-size:2.2rem}section{padding:55px 8%}}
+</style>
+</head>
+<body>
+<header>
+<h1>My Portfolio</h1>
+<nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
+</header>
+<main>
+<div class="hero">
+<p class="hello">Hello, my name is Miguel.</p>
+<h2>IT Student &amp; Aspiring Network Administrator</h2>
+<p class="intro">I am an Information Technology student with an interest in networking, system administration, technical support, and cybersecurity. I enjoy learning through hands-on projects and solving technical problems.</p>
+<a class="button" href="#projects">View My Projects</a>
+</div>
+<section id="about" class="about">
+<h2>About Me</h2>
+<p>I am currently studying Information Technology with a focus on network administration. My goal is to build a career in IT support, systems administration, or network administration. Through my college courses and personal projects, I have gained experience working with Windows, Linux, computer hardware, networking, programming, and cybersecurity tools.</p>
+</section>
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills-grid">
+<div class="skill">Windows</div><div class="skill">Linux</div><div class="skill">Network Troubleshooting</div><div class="skill">Computer Hardware</div><div class="skill">Python</div><div class="skill">Java</div><div class="skill">Wireshark</div><div class="skill">Nmap</div>
+</div>
+</section>
+<section id="projects">
+<h2>Projects</h2>
+<div class="projects-grid">
+<div class="project-card"><h3>Auto Dealership Network Design</h3><p>Designed a network plan for a fictional multi-location auto dealership. The project included a hub-and-spoke network, IP addressing, VPN connectivity, security, servers, storage, and an IT budget.</p><p class="tools">Networking • Windows Server • VPN • Security</p></div>
+<div class="project-card"><h3>Course Tutor AI Project</h3><p>Created a simple course tutor that retrieves information from course material and uses generative AI to answer questions based on the provided content.</p><p class="tools">Python • Generative AI • RAG</p></div>
+<div class="project-card"><h3>Personal Portfolio Website</h3><p>Built a responsive single-page portfolio using HTML and CSS. The site uses a dark-mode design, responsive layouts, navigation, and interactive project cards.</p><p class="tools">HTML • CSS • Responsive Design</p></div>
+</div>
+</section>
+<section id="contact" class="contact">
+<h2>Contact</h2>
+<p>I am interested in opportunities to continue learning and gaining experience in IT.</p>
+<p>Email: gamarram@student.wpunj.edu</p>
+<p>GitHub: github.com/Due-Linux</p>
+</section>
+</main>
+<footer><p>&copy; <span id="year"></span> My Portfolio. Built for my college portfolio project.</p></footer>
+<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+</body>
+</html>
